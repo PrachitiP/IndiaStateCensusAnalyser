@@ -1,5 +1,7 @@
 from com.bridgelabz.CensusAnalyser.CSVLoader import CSVLoader
 from com.bridgelabz.CensusAnalyser.CensusAnalyserError import CensusAnalyserError
+from com.bridgelabz.CensusAnalyser.IndianCensus import IndianCensus
+from com.bridgelabz.CensusAnalyser.IndianCensus import IndianStateCode
 import pytest
 
 CENSUS_CSV_FILE_PATH = "C:/Users/PRACHITI PATIL/PycharmProjects/CensusAnalyzer/resources/IndiaStateCensusData.csv"
@@ -7,6 +9,11 @@ CENSUS_CSV_FILE_WRONG_PATH = "IndiaStateCensusData.csv"
 CENSUS_CSV_FILE_WRONG_TYPE = "C:/Users/PRACHITI PATIL/PycharmProjects/CensusAnalyzer/resources/IndiaStateCensusData.xsl"
 CENSUS_CSV_FILE_WRONG_DELIMITER = "C:/Users/PRACHITI PATIL/PycharmProjects/CensusAnalyzer/resources/USStateCensusData.csv"
 CENSUS_CSV_WRONG_HEADER = "C:/Users/PRACHITI PATIL/PycharmProjects/CensusAnalyzer/resources/IndiaStateData.csv"
+STATE_CODE_WITH_FILE_PATH = "C:/Users/PRACHITI PATIL/PycharmProjects/CensusAnalyzer/resources/IndiaStateCode.csv"
+STATE_CODE_WITH_WRONG_PATH = "IndiaStateCode.csv"
+STATE_CODE_WITH_WORNG_TYPE = "C:/Users/PRACHITI PATIL/PycharmProjects/CensusAnalyzer/resources/IndiaStateCode.txt"
+STATE_CODE_WITH_WRONG_HEADER = "C:/Users/PRACHITI PATIL/PycharmProjects/CensusAnalyzer/resources/IndiaStateCensusData.csv"
+STATE_CODE_CSV_WRONG_DELIMITER = "C:/Users/PRACHITI PATIL/PycharmProjects/CensusAnalyzer/resources/IndiaStateCodeInvalidDelimiter.csv"
 
 # check if length of records is same or not
 def test_record_counter():
