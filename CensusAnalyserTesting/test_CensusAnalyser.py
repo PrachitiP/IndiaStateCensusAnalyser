@@ -36,3 +36,32 @@ def test_record_header_is_incorrect():
     csv_loader = CSVLoader(CENSUS_CSV_WRONG_HEADER)
     with pytest.raises(CensusAnalyserError):
         csv_loader.record_counter()
+ #UC2
+# check if length of records is same or not
+def test_loadstatecode():
+    csv_loader = CSVLoader(STATE_CODE_WITH_FILE_PATH)
+    assert csv_loader.load_State_Code() == 37
+
+#Check if file is incorrct and returns custom exception
+def test_record_counter_wrong_file_path():
+    csv_loader = CSVLoader(STATE_CODE_WITH_WRONG_PATH)
+    with pytest.raises(CensusAnalyserError):
+        csv_loader.load_State_Code()
+
+#Check if correct file with wrong type
+def test_record_counter_wrong_file_type():
+    csv_loader = CSVLoader(STATE_CODE_WITH_WORNG_TYPE)
+    with pytest.raises(CensusAnalyserError):
+        csv_loader.load_State_Code()
+
+#Check if files is correct but delimiter is wrong
+def test_record_delimiter_wrong():
+    csv_loader = CSVLoader(STATE_CODE_CSV_WRONG_DELIMITER)
+    with pytest.raises(CensusAnalyserError):
+        csv_loader.load_State_Code()
+
+#Check when file is correct but header is incorrect
+def test_record_header_is_incorrect():
+    csv_loader = CSVLoader(STATE_CODE_WITH_WRONG_HEADER)
+    with pytest.raises(CensusAnalyserError):
+        csv_loader.load_State_Code()
