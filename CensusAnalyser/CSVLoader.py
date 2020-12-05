@@ -1,1 +1,0 @@
-print("Indian States Census Analyser Program")
